@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<h1><i class="bi bi-gear"></i> Admin Dashboard</h1>
+<!-- Added gear icon -->
+<a href="{{ url_for('add_disease') }}" class="btn btn-primary mb-3"
+  ><i class="bi bi-plus-circle"></i> Add New Disease</a
+>
+<a href="{{ url_for('register') }}" class="btn btn-secondary mb-3"
+  ><i class="bi bi-person-plus"></i> Register New User</a
+>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Disease Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for disease in diseases %}
+    <tr>
+      <td>{{ disease.name }}</td>
+      <td>
+        <a
+          href="{{ url_for('edit_disease', id=disease.id) }}"
+          class="btn btn-sm btn-warning"
+          ><i class="bi bi-pencil"></i> Edit</a
+        >
+        <a
+          href="{{ url_for('delete_disease', id=disease.id) }}"
+          class="btn btn-sm btn-danger"
+          onclick="return confirm('Are you sure?')"
+          ><i class="bi bi-trash"></i> Delete</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

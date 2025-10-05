@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+<h1><i class="bi bi-plus-circle"></i> Add Disease</h1>
+<!-- Added plus icon -->
+<form action="" method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.name.label }}<br />
+    {{ form.name(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.symptom_en.label }}<br />
+    {{ form.symptom_en(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.symptom_hi.label }}<br />
+    {{ form.symptom_hi(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.symptom_bn.label }}<br />
+    {{ form.symptom_bn(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.symptom_te.label }}<br />
+    {{ form.symptom_te(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.prevention_en.label }}<br />
+    {{ form.prevention_en(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.prevention_hi.label }}<br />
+    {{ form.prevention_hi(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.prevention_bn.label }}<br />
+    {{ form.prevention_bn(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.prevention_te.label }}<br />
+    {{ form.prevention_te(class="form-control") }}
+  </div>
+  <p>{{ form.submit(class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

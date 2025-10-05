@@ -1,0 +1,13 @@
+flask
+flask-sqlalchemy
+flask-login
+flask-wtf
+wtforms
+scikit-learn
+googletrans==4.0.0-rc1
+indictrans2-ai4bharat
+langdetect
+numpy==1.23.5
+werkzeug
+tensorflow-cpu==2.10.0
+Pillow>=9.0.0

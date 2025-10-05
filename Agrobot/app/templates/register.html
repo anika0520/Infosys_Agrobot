@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<h1><i class="bi bi-person-plus"></i> Register New User</h1>
+<!-- Added person-plus icon -->
+<form action="" method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.username.label }}<br />
+    {{ form.username(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.password.label }}<br />
+    {{ form.password(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.confirm_password.label }}<br />
+    {{ form.confirm_password(class="form-control") }}
+  </div>
+  <div class="form-check">
+    {{ form.is_admin(class="form-check-input") }} {{ form.is_admin.label }}
+  </div>
+  <p>{{ form.submit(class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

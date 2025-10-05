@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<h1>🌱 Agrobot</h1>
+<form action="" method="post" enctype="multipart/form-data" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.language.label }}<br />
+    {{ form.language(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.symptom.label }}<br />
+    {{ form.symptom(class="form-control", rows=3) }}
+  </div>
+  <div class="form-group">
+    {{ form.image.label }}<br />
+    {{ form.image(class="form-control-file") }}
+  </div>
+  <p>{{ form.submit(class="btn btn-primary") }}</p>
+</form>
+{% if result %}
+<h2>Results</h2>
+{% if image_filename %}
+<img
+  src="{{ url_for('static', filename='uploads/' + image_filename) }}"
+  alt="Uploaded Plant Image"
+  style="max-width: 300px"
+/>
+{% endif %}
+<p><strong>{{ labels.disease }}</strong> 🦠 {{ result.disease }}</p>
+<p><strong>{{ labels.prevention }}</strong> 💊 {{ result.prevention }}</p>
+<p>
+  <strong>{{ labels.confidence }}</strong> ✅ {{ result.confidence | round(2)
+  }}%
+</p>
+{% endif %} {% endblock %}

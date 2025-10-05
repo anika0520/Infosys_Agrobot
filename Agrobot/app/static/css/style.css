@@ -1,0 +1,65 @@
+/* Enhanced styles for agriculture theme */
+body {
+  background-color: #f0f8f0; /* Light green background for farm feel */
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding-top: 20px;
+}
+
+.navbar {
+  background-color: #228b22; /* Forest green for navbar */
+}
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1,
+h2 {
+  color: #006400; /* Dark green for headings */
+}
+
+.form-control {
+  border: 1px solid #90ee90; /* Light green borders */
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #32cd32; /* Lime green buttons */
+  border-color: #32cd32;
+}
+
+.btn-primary:hover {
+  background-color: #228b22; /* Darker green on hover */
+}
+
+.btn-warning {
+  background-color: #ffd700; /* Gold for edit */
+}
+
+.btn-danger {
+  background-color: #cd5c5c; /* Indian red for delete */
+}
+
+.table {
+  border: 1px solid #90ee90;
+}
+
+.table th {
+  background-color: #98fb98; /* Pale green for table headers */
+}
+
+.alert-info {
+  background-color: #e0ffff; /* Light cyan for flashes */
+  border-color: #afeeee;
+}
+
+/* Add some icons if needed (Bootstrap Icons are included in base.html) */

@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block content %}
+<h1><i class="bi bi-lock"></i> Login</h1>
+<!-- Added lock icon -->
+<form action="" method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.username.label }}<br />
+    {{ form.username(class="form-control") }}
+  </div>
+  <div class="form-group">
+    {{ form.password.label }}<br />
+    {{ form.password(class="form-control") }}
+  </div>
+  <div class="form-check">
+    {{ form.remember(class="form-check-input") }} {{ form.remember.label }}
+  </div>
+  <p>{{ form.submit(class="btn btn-primary") }}</p>
+</form>
+{% endblock %}
